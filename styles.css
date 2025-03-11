@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html    {
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    background-image: url("imgs/pizza.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+li h1{
+    color: peru;
+    padding:0 30px;
+}
+
+
+nav {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0 0 10px 10px;
+}
+
+nav li {
+    height: 60px;
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+nav a{
+    height: 100%;
+    padding:0  30px;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+nav a:hover{
+    color: black;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: black;
+    backdrop-filter: blur(20px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.sidebar li {
+    width: 100%;
+}
+.sidebar a{
+    /*color: black;*/
+    width: 100%;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+.menu-button {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .hideonMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+
+@media (max-width: 400px) {
+    .sidebar {
+        width: 80%;
+    }
+}
